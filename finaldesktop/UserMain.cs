@@ -23,6 +23,26 @@ namespace finaldesktop
             this.Hide();
         }
 
-       
+        private void button15_Click(object sender, EventArgs e)
+        {
+            new RegisterUser().Show();
+            this.Hide();
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            new UserSearch().Show();
+            this.Hide();
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            new Main().Show();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            new UserMoney1().Show();
+        }
     }
 }

@@ -35,7 +35,7 @@
             this.txtphone = new System.Windows.Forms.TextBox();
             this.txtfullname = new System.Windows.Forms.TextBox();
             this.txtciz = new System.Windows.Forms.TextBox();
-            this.txtusername = new System.Windows.Forms.TextBox();
+            this.txtuser = new System.Windows.Forms.TextBox();
             this.idthis = new System.Windows.Forms.Label();
             this.idaddr = new System.Windows.Forms.Label();
             this.idfullname = new System.Windows.Forms.Label();
@@ -43,15 +43,15 @@
             this.idciz = new System.Windows.Forms.Label();
             this.iduser = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.txtfamily = new System.Windows.Forms.TextBox();
+            this.idfamily = new System.Windows.Forms.Label();
+            this.txtthis = new System.Windows.Forms.TextBox();
+            this.txtthis1 = new System.Windows.Forms.TextBox();
+            this.idthis1 = new System.Windows.Forms.Label();
+            this.txtthisphone = new System.Windows.Forms.TextBox();
+            this.idthisphone = new System.Windows.Forms.Label();
+            this.txtthisphone1 = new System.Windows.Forms.TextBox();
+            this.idthisphone1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -64,6 +64,7 @@
             this.btngoback.TabIndex = 37;
             this.btngoback.Text = "กลับหน้าหลัก";
             this.btngoback.UseVisualStyleBackColor = true;
+            this.btngoback.Click += new System.EventHandler(this.btngoback_Click);
             // 
             // btnlogin
             // 
@@ -74,6 +75,7 @@
             this.btnlogin.TabIndex = 36;
             this.btnlogin.Text = "สมัครสมาชิก";
             this.btnlogin.UseVisualStyleBackColor = true;
+            this.btnlogin.Click += new System.EventHandler(this.btnlogin_Click);
             // 
             // dateTimePicker1
             // 
@@ -115,13 +117,14 @@
             this.txtciz.Size = new System.Drawing.Size(312, 22);
             this.txtciz.TabIndex = 30;
             // 
-            // txtusername
+            // txtuser
             // 
-            this.txtusername.Location = new System.Drawing.Point(718, 176);
-            this.txtusername.Margin = new System.Windows.Forms.Padding(4);
-            this.txtusername.Name = "txtusername";
-            this.txtusername.Size = new System.Drawing.Size(312, 22);
-            this.txtusername.TabIndex = 28;
+            this.txtuser.Location = new System.Drawing.Point(718, 176);
+            this.txtuser.Margin = new System.Windows.Forms.Padding(4);
+            this.txtuser.Name = "txtuser";
+            this.txtuser.Size = new System.Drawing.Size(312, 22);
+            this.txtuser.TabIndex = 28;
+            this.txtuser.TextChanged += new System.EventHandler(this.txtuser_TextChanged);
             // 
             // idthis
             // 
@@ -200,89 +203,89 @@
             this.label1.TabIndex = 20;
             this.label1.Text = "สมัครสมาชิก : ลูกค้า";
             // 
-            // textBox1
+            // txtfamily
             // 
-            this.textBox1.Location = new System.Drawing.Point(718, 238);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(312, 22);
-            this.textBox1.TabIndex = 39;
+            this.txtfamily.Location = new System.Drawing.Point(718, 238);
+            this.txtfamily.Margin = new System.Windows.Forms.Padding(4);
+            this.txtfamily.Name = "txtfamily";
+            this.txtfamily.Size = new System.Drawing.Size(312, 22);
+            this.txtfamily.TabIndex = 39;
             // 
-            // label2
+            // idfamily
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(434, 238);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(131, 30);
-            this.label2.TabIndex = 38;
-            this.label2.Text = "รหัสครอบครัว";
+            this.idfamily.AutoSize = true;
+            this.idfamily.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.idfamily.Location = new System.Drawing.Point(434, 238);
+            this.idfamily.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.idfamily.Name = "idfamily";
+            this.idfamily.Size = new System.Drawing.Size(105, 24);
+            this.idfamily.TabIndex = 38;
+            this.idfamily.Text = "รหัสครอบครัว";
             // 
-            // textBox2
+            // txtthis
             // 
-            this.textBox2.Location = new System.Drawing.Point(718, 558);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(312, 22);
-            this.textBox2.TabIndex = 40;
+            this.txtthis.Location = new System.Drawing.Point(718, 558);
+            this.txtthis.Margin = new System.Windows.Forms.Padding(4);
+            this.txtthis.Name = "txtthis";
+            this.txtthis.Size = new System.Drawing.Size(312, 22);
+            this.txtthis.TabIndex = 40;
             // 
-            // textBox3
+            // txtthis1
             // 
-            this.textBox3.Location = new System.Drawing.Point(718, 627);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(312, 22);
-            this.textBox3.TabIndex = 42;
+            this.txtthis1.Location = new System.Drawing.Point(718, 627);
+            this.txtthis1.Margin = new System.Windows.Forms.Padding(4);
+            this.txtthis1.Name = "txtthis1";
+            this.txtthis1.Size = new System.Drawing.Size(312, 22);
+            this.txtthis1.TabIndex = 42;
             // 
-            // label3
+            // idthis1
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(451, 627);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(180, 24);
-            this.label3.TabIndex = 41;
-            this.label3.Text = "ผู้รับผลประโยชน์ คนที่2";
+            this.idthis1.AutoSize = true;
+            this.idthis1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.idthis1.Location = new System.Drawing.Point(451, 627);
+            this.idthis1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.idthis1.Name = "idthis1";
+            this.idthis1.Size = new System.Drawing.Size(180, 24);
+            this.idthis1.TabIndex = 41;
+            this.idthis1.Text = "ผู้รับผลประโยชน์ คนที่2";
             // 
-            // textBox4
+            // txtthisphone
             // 
-            this.textBox4.Location = new System.Drawing.Point(1414, 561);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(312, 22);
-            this.textBox4.TabIndex = 44;
+            this.txtthisphone.Location = new System.Drawing.Point(1414, 561);
+            this.txtthisphone.Margin = new System.Windows.Forms.Padding(4);
+            this.txtthisphone.Name = "txtthisphone";
+            this.txtthisphone.Size = new System.Drawing.Size(312, 22);
+            this.txtthisphone.TabIndex = 44;
             // 
-            // label4
+            // idthisphone
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(1130, 561);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(105, 24);
-            this.label4.TabIndex = 43;
-            this.label4.Text = "เบอร์โทรศัพท์";
+            this.idthisphone.AutoSize = true;
+            this.idthisphone.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.idthisphone.Location = new System.Drawing.Point(1130, 561);
+            this.idthisphone.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.idthisphone.Name = "idthisphone";
+            this.idthisphone.Size = new System.Drawing.Size(105, 24);
+            this.idthisphone.TabIndex = 43;
+            this.idthisphone.Text = "เบอร์โทรศัพท์";
             // 
-            // textBox5
+            // txtthisphone1
             // 
-            this.textBox5.Location = new System.Drawing.Point(1426, 630);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(312, 22);
-            this.textBox5.TabIndex = 46;
+            this.txtthisphone1.Location = new System.Drawing.Point(1414, 627);
+            this.txtthisphone1.Margin = new System.Windows.Forms.Padding(4);
+            this.txtthisphone1.Name = "txtthisphone1";
+            this.txtthisphone1.Size = new System.Drawing.Size(312, 22);
+            this.txtthisphone1.TabIndex = 46;
             // 
-            // label5
+            // idthisphone1
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(1142, 630);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(105, 24);
-            this.label5.TabIndex = 45;
-            this.label5.Text = "เบอร์โทรศัพท์";
+            this.idthisphone1.AutoSize = true;
+            this.idthisphone1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.idthisphone1.Location = new System.Drawing.Point(1142, 630);
+            this.idthisphone1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.idthisphone1.Name = "idthisphone1";
+            this.idthisphone1.Size = new System.Drawing.Size(105, 24);
+            this.idthisphone1.TabIndex = 45;
+            this.idthisphone1.Text = "เบอร์โทรศัพท์";
             // 
             // button2
             // 
@@ -300,15 +303,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(2233, 1138);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtthisphone1);
+            this.Controls.Add(this.idthisphone1);
+            this.Controls.Add(this.txtthisphone);
+            this.Controls.Add(this.idthisphone);
+            this.Controls.Add(this.txtthis1);
+            this.Controls.Add(this.idthis1);
+            this.Controls.Add(this.txtthis);
+            this.Controls.Add(this.txtfamily);
+            this.Controls.Add(this.idfamily);
             this.Controls.Add(this.btngoback);
             this.Controls.Add(this.btnlogin);
             this.Controls.Add(this.dateTimePicker1);
@@ -316,7 +319,7 @@
             this.Controls.Add(this.txtphone);
             this.Controls.Add(this.txtfullname);
             this.Controls.Add(this.txtciz);
-            this.Controls.Add(this.txtusername);
+            this.Controls.Add(this.txtuser);
             this.Controls.Add(this.idthis);
             this.Controls.Add(this.idaddr);
             this.Controls.Add(this.idfullname);
@@ -340,7 +343,7 @@
         private System.Windows.Forms.TextBox txtphone;
         private System.Windows.Forms.TextBox txtfullname;
         private System.Windows.Forms.TextBox txtciz;
-        private System.Windows.Forms.TextBox txtusername;
+        private System.Windows.Forms.TextBox txtuser;
         private System.Windows.Forms.Label idthis;
         private System.Windows.Forms.Label idaddr;
         private System.Windows.Forms.Label idfullname;
@@ -348,15 +351,15 @@
         private System.Windows.Forms.Label idciz;
         private System.Windows.Forms.Label iduser;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtfamily;
+        private System.Windows.Forms.Label idfamily;
+        private System.Windows.Forms.TextBox txtthis;
+        private System.Windows.Forms.TextBox txtthis1;
+        private System.Windows.Forms.Label idthis1;
+        private System.Windows.Forms.TextBox txtthisphone;
+        private System.Windows.Forms.Label idthisphone;
+        private System.Windows.Forms.TextBox txtthisphone1;
+        private System.Windows.Forms.Label idthisphone1;
         private System.Windows.Forms.Button button2;
     }
 }

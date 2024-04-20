@@ -46,6 +46,7 @@
             this.button9.TabIndex = 0;
             this.button9.Text = "1.ฝากเงินสัจจะสะสม";
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button10
             // 
@@ -53,7 +54,7 @@
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(323, 71);
             this.button10.TabIndex = 1;
-            this.button10.Text = "2.การ";
+            this.button10.Text = "2.การชำระเงินสมาชิก";
             this.button10.UseVisualStyleBackColor = true;
             // 
             // button11
@@ -62,7 +63,7 @@
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(323, 71);
             this.button11.TabIndex = 2;
-            this.button11.Text = "button11";
+            this.button11.Text = "3.การกู้เงิน";
             this.button11.UseVisualStyleBackColor = true;
             // 
             // button12
@@ -71,7 +72,7 @@
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(323, 71);
             this.button12.TabIndex = 3;
-            this.button12.Text = "button12";
+            this.button12.Text = "4.การสรุปเงินฝากสมาชิก";
             this.button12.UseVisualStyleBackColor = true;
             // 
             // button13
@@ -80,7 +81,7 @@
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(323, 71);
             this.button13.TabIndex = 4;
-            this.button13.Text = "button13";
+            this.button13.Text = "5.การลาออกสมาชิก";
             this.button13.UseVisualStyleBackColor = true;
             // 
             // button14
@@ -89,26 +90,29 @@
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(323, 71);
             this.button14.TabIndex = 5;
-            this.button14.Text = "button14";
+            this.button14.Text = "6.การค้นหาสมาชิก";
             this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
             // button15
             // 
-            this.button15.Location = new System.Drawing.Point(375, 553);
+            this.button15.Location = new System.Drawing.Point(597, 559);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(323, 71);
             this.button15.TabIndex = 6;
-            this.button15.Text = "button15";
+            this.button15.Text = "7.การสมัครสมาชิก";
             this.button15.UseVisualStyleBackColor = true;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
             // button16
             // 
-            this.button16.Location = new System.Drawing.Point(833, 553);
+            this.button16.Location = new System.Drawing.Point(1154, 695);
             this.button16.Name = "button16";
             this.button16.Size = new System.Drawing.Size(323, 71);
             this.button16.TabIndex = 7;
-            this.button16.Text = "button16";
+            this.button16.Text = "กลับหน้าหลัก";
             this.button16.UseVisualStyleBackColor = true;
+            this.button16.Click += new System.EventHandler(this.button16_Click);
             // 
             // UserMain
             // 

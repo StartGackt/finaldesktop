@@ -35,7 +35,7 @@ namespace finaldesktop
                         cmd.Parameters.AddWithValue("@username", iduser);
                         cmd.Parameters.AddWithValue("@password", idpass);
                         MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
-                        DataTable table = new DataTable(); // Added '=' to initialize DataTable
+                        DataTable table = new DataTable(); 
                         adapter.Fill(table);
 
                         if (table.Rows.Count > 0)

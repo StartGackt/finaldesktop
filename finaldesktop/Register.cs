@@ -90,5 +90,10 @@ namespace finaldesktop
                 }
             }
         }
+
+        private void txtusername_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
