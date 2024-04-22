@@ -16,5 +16,10 @@ namespace finaldesktop
         {
             InitializeComponent();
         }
+
+        private void Usermoney1_6_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
