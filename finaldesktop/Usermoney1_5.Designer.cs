@@ -28,56 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtfamily = new System.Windows.Forms.TextBox();
-            this.idfamily = new System.Windows.Forms.Label();
-            this.txtphone = new System.Windows.Forms.TextBox();
-            this.txtfullname = new System.Windows.Forms.TextBox();
-            this.txtciz = new System.Windows.Forms.TextBox();
             this.txtuser = new System.Windows.Forms.TextBox();
-            this.idfullname = new System.Windows.Forms.Label();
-            this.idphone = new System.Windows.Forms.Label();
-            this.idciz = new System.Windows.Forms.Label();
             this.iduser = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // txtfamily
-            // 
-            this.txtfamily.Location = new System.Drawing.Point(521, 168);
-            this.txtfamily.Name = "txtfamily";
-            this.txtfamily.Size = new System.Drawing.Size(235, 20);
-            this.txtfamily.TabIndex = 50;
-            // 
-            // idfamily
-            // 
-            this.idfamily.AutoSize = true;
-            this.idfamily.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idfamily.Location = new System.Drawing.Point(309, 168);
-            this.idfamily.Name = "idfamily";
-            this.idfamily.Size = new System.Drawing.Size(86, 18);
-            this.idfamily.TabIndex = 49;
-            this.idfamily.Text = "รหัสครอบครัว";
-            // 
-            // txtphone
-            // 
-            this.txtphone.Location = new System.Drawing.Point(519, 266);
-            this.txtphone.Name = "txtphone";
-            this.txtphone.Size = new System.Drawing.Size(235, 20);
-            this.txtphone.TabIndex = 48;
-            // 
-            // txtfullname
-            // 
-            this.txtfullname.Location = new System.Drawing.Point(521, 315);
-            this.txtfullname.Name = "txtfullname";
-            this.txtfullname.Size = new System.Drawing.Size(235, 20);
-            this.txtfullname.TabIndex = 47;
-            // 
-            // txtciz
-            // 
-            this.txtciz.Location = new System.Drawing.Point(521, 214);
-            this.txtciz.Name = "txtciz";
-            this.txtciz.Size = new System.Drawing.Size(235, 20);
-            this.txtciz.TabIndex = 46;
             // 
             // txtuser
             // 
@@ -85,36 +45,6 @@
             this.txtuser.Name = "txtuser";
             this.txtuser.Size = new System.Drawing.Size(235, 20);
             this.txtuser.TabIndex = 45;
-            // 
-            // idfullname
-            // 
-            this.idfullname.AutoSize = true;
-            this.idfullname.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idfullname.Location = new System.Drawing.Point(308, 316);
-            this.idfullname.Name = "idfullname";
-            this.idfullname.Size = new System.Drawing.Size(76, 18);
-            this.idfullname.TabIndex = 44;
-            this.idfullname.Text = "ชื่อ-นามสกุล";
-            // 
-            // idphone
-            // 
-            this.idphone.AutoSize = true;
-            this.idphone.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idphone.Location = new System.Drawing.Point(306, 266);
-            this.idphone.Name = "idphone";
-            this.idphone.Size = new System.Drawing.Size(85, 18);
-            this.idphone.TabIndex = 43;
-            this.idphone.Text = "เบอร์โทรศัพท์";
-            // 
-            // idciz
-            // 
-            this.idciz.AutoSize = true;
-            this.idciz.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idciz.Location = new System.Drawing.Point(309, 215);
-            this.idciz.Name = "idciz";
-            this.idciz.Size = new System.Drawing.Size(132, 18);
-            this.idciz.TabIndex = 42;
-            this.idciz.Text = "เลขประจำตัวประชาชน";
             // 
             // iduser
             // 
@@ -130,47 +60,89 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(641, 53);
+            this.label1.Location = new System.Drawing.Point(447, 56);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(120, 18);
+            this.label1.Size = new System.Drawing.Size(264, 18);
             this.label1.TabIndex = 40;
-            this.label1.Text = "สมัครสมาชิก : ลูกค้า";
+            this.label1.Text = "ข้อมูลเกี่ยวกับสมาชิก : การสรุปเงินฝากสมาชิก ";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(713, 642);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(115, 30);
+            this.button6.TabIndex = 81;
+            this.button6.Text = "ย้อนกลับ";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(481, 642);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(115, 30);
+            this.button5.TabIndex = 80;
+            this.button5.Text = "หน้าหลัก";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(269, 642);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(115, 30);
+            this.button4.TabIndex = 79;
+            this.button4.Text = "ลบ";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(807, 112);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(115, 30);
+            this.button2.TabIndex = 78;
+            this.button2.Text = "ค้นหา";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(137, 167);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(940, 428);
+            this.dataGridView1.TabIndex = 82;
             // 
             // Usermoney1_5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1203, 739);
-            this.Controls.Add(this.txtfamily);
-            this.Controls.Add(this.idfamily);
-            this.Controls.Add(this.txtphone);
-            this.Controls.Add(this.txtfullname);
-            this.Controls.Add(this.txtciz);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.txtuser);
-            this.Controls.Add(this.idfullname);
-            this.Controls.Add(this.idphone);
-            this.Controls.Add(this.idciz);
             this.Controls.Add(this.iduser);
             this.Controls.Add(this.label1);
             this.Name = "Usermoney1_5";
             this.Text = "Usermoney1_5";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox txtfamily;
-        private System.Windows.Forms.Label idfamily;
-        private System.Windows.Forms.TextBox txtphone;
-        private System.Windows.Forms.TextBox txtfullname;
-        private System.Windows.Forms.TextBox txtciz;
         private System.Windows.Forms.TextBox txtuser;
-        private System.Windows.Forms.Label idfullname;
-        private System.Windows.Forms.Label idphone;
-        private System.Windows.Forms.Label idciz;
         private System.Windows.Forms.Label iduser;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
