@@ -88,12 +88,6 @@
     <Compile Include="UserMoney1.Designer.cs">
       <DependentUpon>UserMoney1.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserMoney1_1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UserMoney1_1.Designer.cs">
-      <DependentUpon>UserMoney1_1.cs</DependentUpon>
-    </Compile>
     <Compile Include="UserSearch.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,9 +120,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserMoney1.resx">
       <DependentUpon>UserMoney1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserMoney1_1.resx">
-      <DependentUpon>UserMoney1_1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserSearch.resx">
       <DependentUpon>UserSearch.cs</DependentUpon>

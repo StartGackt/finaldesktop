@@ -19,7 +19,7 @@ namespace finaldesktop
 
         private void button1_Click(object sender, EventArgs e)
         {
-           
+            new Usermoney1_1().ShowDialog();
         }
 
         private void UserMoney1_Load(object sender, EventArgs e)
