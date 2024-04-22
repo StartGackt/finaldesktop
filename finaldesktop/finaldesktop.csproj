@@ -88,6 +88,48 @@
     <Compile Include="UserMoney1.Designer.cs">
       <DependentUpon>UserMoney1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Usermoney1_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usermoney1_1.Designer.cs">
+      <DependentUpon>Usermoney1_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usermoney1_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usermoney1_2.Designer.cs">
+      <DependentUpon>Usermoney1_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usermoney1_3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usermoney1_3.Designer.cs">
+      <DependentUpon>Usermoney1_3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usermoney1_4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usermoney1_4.Designer.cs">
+      <DependentUpon>Usermoney1_4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usermoney1_5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usermoney1_5.Designer.cs">
+      <DependentUpon>Usermoney1_5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usermoney1_6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usermoney1_6.Designer.cs">
+      <DependentUpon>Usermoney1_6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usermoney1_7.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usermoney1_7.Designer.cs">
+      <DependentUpon>Usermoney1_7.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserSearch.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +162,27 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserMoney1.resx">
       <DependentUpon>UserMoney1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usermoney1_1.resx">
+      <DependentUpon>Usermoney1_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usermoney1_2.resx">
+      <DependentUpon>Usermoney1_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usermoney1_3.resx">
+      <DependentUpon>Usermoney1_3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usermoney1_4.resx">
+      <DependentUpon>Usermoney1_4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usermoney1_5.resx">
+      <DependentUpon>Usermoney1_5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usermoney1_6.resx">
+      <DependentUpon>Usermoney1_6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usermoney1_7.resx">
+      <DependentUpon>Usermoney1_7.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserSearch.resx">
       <DependentUpon>UserSearch.cs</DependentUpon>
