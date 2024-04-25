@@ -60,7 +60,7 @@
             // txtfamily
             // 
             this.txtfamily.Location = new System.Drawing.Point(604, 246);
-            this.txtfamily.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtfamily.Margin = new System.Windows.Forms.Padding(4);
             this.txtfamily.Name = "txtfamily";
             this.txtfamily.Size = new System.Drawing.Size(312, 22);
             this.txtfamily.TabIndex = 50;
@@ -79,7 +79,7 @@
             // txtphone
             // 
             this.txtphone.Location = new System.Drawing.Point(601, 367);
-            this.txtphone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtphone.Margin = new System.Windows.Forms.Padding(4);
             this.txtphone.Name = "txtphone";
             this.txtphone.Size = new System.Drawing.Size(312, 22);
             this.txtphone.TabIndex = 48;
@@ -87,7 +87,7 @@
             // txtfullname
             // 
             this.txtfullname.Location = new System.Drawing.Point(604, 427);
-            this.txtfullname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtfullname.Margin = new System.Windows.Forms.Padding(4);
             this.txtfullname.Name = "txtfullname";
             this.txtfullname.Size = new System.Drawing.Size(312, 22);
             this.txtfullname.TabIndex = 47;
@@ -95,7 +95,7 @@
             // txtuser
             // 
             this.txtuser.Location = new System.Drawing.Point(604, 185);
-            this.txtuser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtuser.Margin = new System.Windows.Forms.Padding(4);
             this.txtuser.Name = "txtuser";
             this.txtuser.Size = new System.Drawing.Size(312, 22);
             this.txtuser.TabIndex = 45;
@@ -158,7 +158,7 @@
             // txtmoney
             // 
             this.txtmoney.Location = new System.Drawing.Point(601, 495);
-            this.txtmoney.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtmoney.Margin = new System.Windows.Forms.Padding(4);
             this.txtmoney.Name = "txtmoney";
             this.txtmoney.Size = new System.Drawing.Size(312, 22);
             this.txtmoney.TabIndex = 54;
@@ -166,7 +166,7 @@
             // txtmoneysucc
             // 
             this.txtmoneysucc.Location = new System.Drawing.Point(601, 636);
-            this.txtmoneysucc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtmoneysucc.Margin = new System.Windows.Forms.Padding(4);
             this.txtmoneysucc.Name = "txtmoneysucc";
             this.txtmoneysucc.Size = new System.Drawing.Size(312, 22);
             this.txtmoneysucc.TabIndex = 53;
@@ -229,7 +229,7 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(617, 549);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(265, 22);
             this.dateTimePicker1.TabIndex = 59;
@@ -242,7 +242,7 @@
             "มี",
             "ไม่มี"});
             this.txtstatus.Location = new System.Drawing.Point(601, 300);
-            this.txtstatus.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtstatus.Margin = new System.Windows.Forms.Padding(4);
             this.txtstatus.Name = "txtstatus";
             this.txtstatus.Size = new System.Drawing.Size(312, 24);
             this.txtstatus.TabIndex = 60;
@@ -250,28 +250,29 @@
             // edit
             // 
             this.edit.Location = new System.Drawing.Point(151, 790);
-            this.edit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.edit.Margin = new System.Windows.Forms.Padding(4);
             this.edit.Name = "edit";
             this.edit.Size = new System.Drawing.Size(153, 37);
             this.edit.TabIndex = 61;
             this.edit.Text = "แก้ไข";
             this.edit.UseVisualStyleBackColor = true;
-            this.edit.Click += new System.EventHandler(this.button1_Click);
+            this.edit.Click += new System.EventHandler(this.edit_Click);
             // 
             // serach
             // 
             this.serach.Location = new System.Drawing.Point(426, 790);
-            this.serach.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.serach.Margin = new System.Windows.Forms.Padding(4);
             this.serach.Name = "serach";
             this.serach.Size = new System.Drawing.Size(153, 37);
             this.serach.TabIndex = 62;
             this.serach.Text = "ค้นหา";
             this.serach.UseVisualStyleBackColor = true;
+            this.serach.Click += new System.EventHandler(this.serach_Click);
             // 
             // del
             // 
             this.del.Location = new System.Drawing.Point(675, 790);
-            this.del.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.del.Margin = new System.Windows.Forms.Padding(4);
             this.del.Name = "del";
             this.del.Size = new System.Drawing.Size(153, 37);
             this.del.TabIndex = 64;
@@ -281,7 +282,7 @@
             // button5
             // 
             this.button5.Location = new System.Drawing.Point(931, 790);
-            this.button5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button5.Margin = new System.Windows.Forms.Padding(4);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(153, 37);
             this.button5.TabIndex = 65;
@@ -291,7 +292,7 @@
             // button6
             // 
             this.button6.Location = new System.Drawing.Point(1205, 790);
-            this.button6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button6.Margin = new System.Windows.Forms.Padding(4);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(153, 37);
             this.button6.TabIndex = 66;
@@ -324,7 +325,7 @@
             this.idmoney1.Location = new System.Drawing.Point(320, 596);
             this.idmoney1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.idmoney1.Name = "idmoney1";
-            this.idmoney1.Size = new System.Drawing.Size(144, 30);
+            this.idmoney1.Size = new System.Drawing.Size(115, 24);
             this.idmoney1.TabIndex = 68;
             this.idmoney1.Text = "จำนวนเงินฝาก";
             // 
@@ -332,7 +333,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1740, 1089);
+            this.ClientSize = new System.Drawing.Size(1392, 871);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtmoney1);
             this.Controls.Add(this.idmoney1);
@@ -360,7 +361,7 @@
             this.Controls.Add(this.idstatus);
             this.Controls.Add(this.iduser);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Usermoney1_1";
             this.Text = "Usermoney1_1";
             this.ResumeLayout(false);

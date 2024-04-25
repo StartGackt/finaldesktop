@@ -12,14 +12,26 @@ namespace finaldesktop
         {
             InitializeComponent();
             txtuser.TextChanged += txtuser_TextChanged;
+            txtmoney.TextChanged += txtmoney_TextChanged;
+            txtmoney1.TextChanged += txtmoney1_TextChanged;
         }
 
         private void txtuser_TextChanged(object sender, EventArgs e)
         {
-            button1_Click(sender, e);
+            LoadUserData();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void txtmoney_TextChanged(object sender, EventArgs e)
+        {
+            CalculateTotalMoney();
+        }
+
+        private void txtmoney1_TextChanged(object sender, EventArgs e)
+        {
+            CalculateTotalMoney();
+        }
+
+        private void LoadUserData()
         {
             try
             {
@@ -105,10 +117,65 @@ namespace finaldesktop
 
         private void ClearMoneyFields()
         {
-            txtmoney.Text = string.Empty;
+            txtmoney.Text = "0";
             txtmoney1.Text = string.Empty;
             txtmoneysucc.Text = string.Empty;
             dateTimePicker1.Value = DateTime.Now;
+        }
+
+        private void CalculateTotalMoney()
+        {
+            try
+            {
+                decimal idmoney = decimal.Parse(txtmoney.Text);
+                decimal idmoney1 = string.IsNullOrEmpty(txtmoney1.Text) ? 0 : decimal.Parse(txtmoney1.Text);
+                decimal idmoneysucc = idmoney + idmoney1;
+                txtmoneysucc.Text = idmoneysucc.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred while calculating total money: " + ex.Message);
+            }
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (MySqlConnection conn = new MySqlConnection(connString))
+                {
+                    conn.Open();
+                    string query = "INSERT INTO `money1` ( `username`, `idmoney`, `idmoney1`, `idmoneysucc`, `iddate`, `idstatus`) VALUES (@username, @idmoney, @idmoney1, @idmoneysucc, @iddate, '444')";
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@idmoney1", txtmoney1.Text);
+                    cmd.Parameters.AddWithValue("@idmoneysucc", txtmoneysucc.Text);
+                    cmd.Parameters.AddWithValue("@iddate", dateTimePicker1.Value.ToString("yyyy-MM-dd HH:mm:ss"));
+
+                    int rowsAffected = cmd.ExecuteNonQuery(); // Execute query here
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Data saved successfully!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("No changes were made.");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred while saving data: " + ex.Message);
+            }
+        }
+
+        private void edit_Click(object sender, EventArgs e)
+        {
+            btnSave_Click(sender, e);
+        }
+
+        private void serach_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
