@@ -249,7 +249,7 @@
             // 
             // edit
             // 
-            this.edit.Location = new System.Drawing.Point(151, 790);
+            this.edit.Location = new System.Drawing.Point(156, 790);
             this.edit.Margin = new System.Windows.Forms.Padding(4);
             this.edit.Name = "edit";
             this.edit.Size = new System.Drawing.Size(153, 37);
