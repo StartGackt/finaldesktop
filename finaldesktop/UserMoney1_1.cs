@@ -127,8 +127,22 @@ namespace finaldesktop
         {
             try
             {
-                decimal idmoney = decimal.Parse(txtmoney.Text);
-                decimal idmoney1 = string.IsNullOrEmpty(txtmoney1.Text) ? 0 : decimal.Parse(txtmoney1.Text);
+                decimal idmoney;
+                if (!decimal.TryParse(txtmoney.Text, out idmoney))
+                {
+                    MessageBox.Show("Please enter a valid value for Money.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtmoney.Text = "0"; // Reset to default value
+                    return;
+                }
+
+                decimal idmoney1;
+                if (!decimal.TryParse(txtmoney1.Text, out idmoney1))
+                {
+                   
+                    txtmoney1.Text = "0"; // Reset to default value
+                    return;
+                }
+
                 decimal idmoneysucc = idmoney + idmoney1;
                 txtmoneysucc.Text = idmoneysucc.ToString();
             }
@@ -153,10 +167,14 @@ namespace finaldesktop
                     cmd.Parameters.AddWithValue("@idmoneysucc", txtmoneysucc.Text);
                     cmd.Parameters.AddWithValue("@iddate", dateTimePicker1.Value.ToString("yyyy-MM-dd HH:mm:ss"));
 
-                    int rowsAffected = cmd.ExecuteNonQuery(); // Execute query here
+                    int rowsAffected = cmd.ExecuteNonQuery();
                     if (rowsAffected > 0)
                     {
                         MessageBox.Show("Data saved successfully!");
+                        // หลังจากบันทึกเสร็จสามารถอัปเดต idmoney ด้วยข้อมูลใหม่ได้
+                        UpdateMoney1Data(txtuser.Text.Trim(), txtmoneysucc.Text); // อัปเดต idmoney ด้วย idmoneysucc
+                        // โหลดข้อมูลใหม่เพื่ออัปเดตในฟอร์ม
+                        LoadMoney1Data(txtuser.Text.Trim());
                     }
                     else
                     {
@@ -170,6 +188,35 @@ namespace finaldesktop
             }
         }
 
+        private void UpdateMoney1Data(string username, string idmoney)
+        {
+            try
+            {
+                using (MySqlConnection conn = new MySqlConnection(connString))
+                {
+                    conn.Open();
+                    string query = "UPDATE money1 SET idmoney = @idmoney WHERE username = @username";
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@idmoney", idmoney);
+                    cmd.Parameters.AddWithValue("@username", username);
+
+                    int rowsAffected = cmd.ExecuteNonQuery();
+                    if (rowsAffected > 0)
+                    {
+                        //MessageBox.Show("idmoney updated successfully!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("No changes were made.");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred while updating idmoney: " + ex.Message);
+            }
+        }
+
         private void edit_Click(object sender, EventArgs e)
         {
             btnSave_Click(sender, e);
@@ -177,51 +224,56 @@ namespace finaldesktop
 
         private void serach_Click(object sender, EventArgs e)
         {
-            try
+
+            string username = txtuser.Text.Trim();
+
+            if (string.IsNullOrEmpty(username))
             {
-                LoadAllMoneyData();
+                MessageBox.Show("Please enter a username to search.", "Empty Username", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("An error occurred while searching: " + ex.Message);
-            }
+
+            LoadUserData();
         }
 
-        private void LoadAllMoneyData()
+        private void del_Click(object sender, EventArgs e)
         {
-            try
+            string username = txtuser.Text.Trim();
+
+            if (string.IsNullOrEmpty(username))
             {
-                using (MySqlConnection conn = new MySqlConnection(connString))
+                MessageBox.Show("Please enter a username to delete.", "Empty Username", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            DialogResult result = MessageBox.Show("Are you sure you want to delete this record?", "Confirm Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                try
                 {
-                    conn.Open();
-                    string query = "SELECT * FROM money1";
-                    MySqlCommand cmd = new MySqlCommand(query, conn);
-
-                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    using (MySqlConnection conn = new MySqlConnection(connString))
                     {
-                        if (reader.Read())
-                        {
-                            string idmoney = reader["idmoney"].ToString();
-                            string idmoney1 = reader["idmoney1"].ToString();
-                            string idmoneysucc = reader["idmoneysucc"].ToString();
-                            DateTime iddate =  reader.GetDateTime("iddate");
+                        conn.Open();
+                        string query = "DELETE FROM money1 WHERE username = @username";
+                        MySqlCommand cmd = new MySqlCommand(query, conn);
+                        cmd.Parameters.AddWithValue("@username", username);
 
-                            txtmoney.Text = idmoney;
-                            txtmoney1.Text = idmoney1;
-                            txtmoneysucc.Text = idmoneysucc;
-                            dateTimePicker1.Value = iddate;
+                        int rowsAffected = cmd.ExecuteNonQuery();
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Record deleted successfully!");
+                            ClearFields(); // Clear all fields after deletion
                         }
                         else
                         {
-                            ClearMoneyFields(); // ล้างข้อมูลใน TextBox เมื่อไม่พบข้อมูล
-                            MessageBox.Show("No data found in money1 table.");
+                            MessageBox.Show("No record found to delete.");
                         }
                     }
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("An error occurred while retrieving data from money1 table: " + ex.Message);
+                catch (Exception ex)
+                {
+                    MessageBox.Show("An error occurred while deleting record: " + ex.Message);
+                }
             }
         }
     }

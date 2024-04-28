@@ -44,5 +44,10 @@ namespace finaldesktop
         {
             new UserMoney1().Show();
         }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            new Usermoney1_2().Show();
+        }
     }
 }

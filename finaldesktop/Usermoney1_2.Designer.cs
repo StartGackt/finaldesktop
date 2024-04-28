@@ -42,16 +42,16 @@
             this.button1 = new System.Windows.Forms.Button();
             this.txtsel = new System.Windows.Forms.ComboBox();
             this.idciz = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.txtnumberpage = new System.Windows.Forms.TextBox();
+            this.idnumberpage = new System.Windows.Forms.Label();
+            this.txtpay = new System.Windows.Forms.TextBox();
+            this.idpay = new System.Windows.Forms.Label();
+            this.txtmoneyvat = new System.Windows.Forms.TextBox();
+            this.idmoneyvat = new System.Windows.Forms.Label();
+            this.txtmoneytotal = new System.Windows.Forms.TextBox();
+            this.idmoneytotal = new System.Windows.Forms.Label();
+            this.txtmoneypay = new System.Windows.Forms.TextBox();
+            this.idmoneypay = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -175,6 +175,7 @@
             this.button1.TabIndex = 67;
             this.button1.Text = "แก้ไข";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // txtsel
             // 
@@ -200,100 +201,100 @@
             this.idciz.TabIndex = 72;
             this.idciz.Text = "สถานะ";
             // 
-            // textBox1
+            // txtnumberpage
             // 
-            this.textBox1.Location = new System.Drawing.Point(713, 369);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(312, 22);
-            this.textBox1.TabIndex = 75;
+            this.txtnumberpage.Location = new System.Drawing.Point(713, 369);
+            this.txtnumberpage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtnumberpage.Name = "txtnumberpage";
+            this.txtnumberpage.Size = new System.Drawing.Size(312, 22);
+            this.txtnumberpage.TabIndex = 75;
             // 
-            // label2
+            // idnumberpage
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(429, 370);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(91, 24);
-            this.label2.TabIndex = 74;
-            this.label2.Text = "สัญญาเลขที่";
+            this.idnumberpage.AutoSize = true;
+            this.idnumberpage.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.idnumberpage.Location = new System.Drawing.Point(429, 370);
+            this.idnumberpage.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.idnumberpage.Name = "idnumberpage";
+            this.idnumberpage.Size = new System.Drawing.Size(91, 24);
+            this.idnumberpage.TabIndex = 74;
+            this.idnumberpage.Text = "สัญญาเลขที่";
             // 
-            // textBox2
+            // txtpay
             // 
-            this.textBox2.Location = new System.Drawing.Point(713, 417);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(312, 22);
-            this.textBox2.TabIndex = 77;
+            this.txtpay.Location = new System.Drawing.Point(713, 417);
+            this.txtpay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtpay.Name = "txtpay";
+            this.txtpay.Size = new System.Drawing.Size(312, 22);
+            this.txtpay.TabIndex = 77;
             // 
-            // label3
+            // idpay
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(429, 418);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(159, 24);
-            this.label3.TabIndex = 76;
-            this.label3.Text = "จำนวนเงินที่ชำระเงิน";
+            this.idpay.AutoSize = true;
+            this.idpay.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.idpay.Location = new System.Drawing.Point(429, 418);
+            this.idpay.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.idpay.Name = "idpay";
+            this.idpay.Size = new System.Drawing.Size(159, 24);
+            this.idpay.TabIndex = 76;
+            this.idpay.Text = "จำนวนเงินที่ชำระเงิน";
             // 
-            // textBox3
+            // txtmoneyvat
             // 
-            this.textBox3.Location = new System.Drawing.Point(713, 471);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(312, 22);
-            this.textBox3.TabIndex = 79;
+            this.txtmoneyvat.Location = new System.Drawing.Point(713, 471);
+            this.txtmoneyvat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtmoneyvat.Name = "txtmoneyvat";
+            this.txtmoneyvat.Size = new System.Drawing.Size(312, 22);
+            this.txtmoneyvat.TabIndex = 79;
             // 
-            // label4
+            // idmoneyvat
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(429, 473);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(146, 24);
-            this.label4.TabIndex = 78;
-            this.label4.Text = "เป็นจำนวนดอกเบี้ย";
+            this.idmoneyvat.AutoSize = true;
+            this.idmoneyvat.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.idmoneyvat.Location = new System.Drawing.Point(429, 473);
+            this.idmoneyvat.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.idmoneyvat.Name = "idmoneyvat";
+            this.idmoneyvat.Size = new System.Drawing.Size(146, 24);
+            this.idmoneyvat.TabIndex = 78;
+            this.idmoneyvat.Text = "เป็นจำนวนดอกเบี้ย";
             // 
-            // textBox4
+            // txtmoneytotal
             // 
-            this.textBox4.Location = new System.Drawing.Point(713, 578);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(312, 22);
-            this.textBox4.TabIndex = 83;
+            this.txtmoneytotal.Location = new System.Drawing.Point(713, 587);
+            this.txtmoneytotal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtmoneytotal.Name = "txtmoneytotal";
+            this.txtmoneytotal.Size = new System.Drawing.Size(312, 22);
+            this.txtmoneytotal.TabIndex = 83;
             // 
-            // label5
+            // idmoneytotal
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(429, 580);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(166, 24);
-            this.label5.TabIndex = 82;
-            this.label5.Text = " จำนวนเงินที่กู้คงเหลือ";
+            this.idmoneytotal.AutoSize = true;
+            this.idmoneytotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.idmoneytotal.Location = new System.Drawing.Point(429, 580);
+            this.idmoneytotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.idmoneytotal.Name = "idmoneytotal";
+            this.idmoneytotal.Size = new System.Drawing.Size(166, 24);
+            this.idmoneytotal.TabIndex = 82;
+            this.idmoneytotal.Text = " จำนวนเงินที่กู้คงเหลือ";
             // 
-            // textBox5
+            // txtmoneypay
             // 
-            this.textBox5.Location = new System.Drawing.Point(713, 524);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(312, 22);
-            this.textBox5.TabIndex = 81;
+            this.txtmoneypay.Location = new System.Drawing.Point(713, 524);
+            this.txtmoneypay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtmoneypay.Name = "txtmoneypay";
+            this.txtmoneypay.Size = new System.Drawing.Size(312, 22);
+            this.txtmoneypay.TabIndex = 81;
             // 
-            // label6
+            // idmoneypay
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(429, 526);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(183, 24);
-            this.label6.TabIndex = 80;
-            this.label6.Text = "จำนวนเงินต้นที่ชำระเงิน";
+            this.idmoneypay.AutoSize = true;
+            this.idmoneypay.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.idmoneypay.Location = new System.Drawing.Point(429, 526);
+            this.idmoneypay.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.idmoneypay.Name = "idmoneypay";
+            this.idmoneypay.Size = new System.Drawing.Size(183, 24);
+            this.idmoneypay.TabIndex = 80;
+            this.idmoneypay.Text = "จำนวนเงินต้นที่ชำระเงิน";
             // 
             // label7
             // 
@@ -348,16 +349,16 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtmoneytotal);
+            this.Controls.Add(this.idmoneytotal);
+            this.Controls.Add(this.txtmoneypay);
+            this.Controls.Add(this.idmoneypay);
+            this.Controls.Add(this.txtmoneyvat);
+            this.Controls.Add(this.idmoneyvat);
+            this.Controls.Add(this.txtpay);
+            this.Controls.Add(this.idpay);
+            this.Controls.Add(this.txtnumberpage);
+            this.Controls.Add(this.idnumberpage);
             this.Controls.Add(this.txtsel);
             this.Controls.Add(this.idciz);
             this.Controls.Add(this.button6);
@@ -396,16 +397,16 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox txtsel;
         private System.Windows.Forms.Label idciz;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtnumberpage;
+        private System.Windows.Forms.Label idnumberpage;
+        private System.Windows.Forms.TextBox txtpay;
+        private System.Windows.Forms.Label idpay;
+        private System.Windows.Forms.TextBox txtmoneyvat;
+        private System.Windows.Forms.Label idmoneyvat;
+        private System.Windows.Forms.TextBox txtmoneytotal;
+        private System.Windows.Forms.Label idmoneytotal;
+        private System.Windows.Forms.TextBox txtmoneypay;
+        private System.Windows.Forms.Label idmoneypay;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
